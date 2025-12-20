@@ -5,7 +5,9 @@ Superstore Dataset | Python + SQL (PostgreSQL)
 
 ## 📘 Project Overview  
 
-**RetailCo faced inconsistent profitability despite strong sales.**  
+**RetailCo faced inconsistent profitability despite strong sales.** 
+
+Analyzed ~10K orders using **Python for data cleaning** and **SQL in PostgreSQL (aggregations, filtering, CASE)** to diagnose inconsistent profitability, identifying discount, product, region, and time-period drivers with **$200K+ potential profit improvement** through targeted recommendations.
 
 ![cheung-yin-8TEj9frsgO0-unsplash (1)](https://github.com/user-attachments/assets/201f504b-dff1-4c90-ab96-8d82896d9721)
 
@@ -97,3 +99,80 @@ To guide the analysis, the project addresses the following questions:
 ✅Expected impact: Improve Q2/Q3 margin from 12% → 13%, adding $15–20K additional profit per quarter.
 
 <br>
+
+# 🧰 Technical Details    
+This section lists the dataset, tools, and technologies used to perform the analysis.
+
+<br>
+
+## 📊 Dataset
+
+* Source: [Superstore dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
+* Scope: ~10K orders across multiple years and product categories.
+* Key Fields:   
+`order_id`, `order_date`, `customer_name`, `segment`, `region`,
+`category`, `sub_category`, `sales`, `profit`, `discount`
+
+<br>
+
+## 🛠 Tools & Technologies
+
+* Python (Pandas) – Data cleaning and preprocessing
+* SQL - Aggregations, filtering, CASE statements, GROUP BY
+* PostgreSQL (pgAdmin) – SQL-based analysis
+
+<br>
+
+## 🔄 Analysis Approach
+
+1. Data Preparation
+   * Cleaned and standardized Superstore sales data using Python (Pandas)
+   * Corrected date formats and created a derived metric for Profit Margin
+
+2. Profitability Analysis (SQL)
+   * Analyzed profit performance by product, sub-category, discount level, customer segment, region, and month
+   * Used weighted profit margins to avoid misleading averages
+
+3. Business Insights
+   * Identified loss-making products and discount thresholds
+   * Highlighted underperforming customer segments, regions, and seasonal periods
+   * Converted findings into actionable pricing and promotion recommendations
+
+<br>
+
+## ▶️ How to Run This Project  
+
+#### 1️⃣ Set up Python environment 
+```python
+pip install -r requirements.txt
+```
+
+#### 2️⃣ Load data into PostgreSQL
+   1. Create a PostgreSQL database
+        ```sql
+         CREATE DATABASE superstore_db;
+         ```
+
+  2. Create the table schema  
+      * Run the schema file located at: `sql/schema.sql`
+      * This creates the orders table with the correct column structure.
+  
+  3. Import the cleaned dataset from `data/superstore_processed.csv`.
+     * Import the CSV into the orders table using: pgAdmin Import/Export tool or PostgreSQL COPY command
+  
+  4. Verify data load
+      ```sql
+      SELECT COUNT(*) FROM orders;
+      ```
+<br>  
+
+## 🚀 Future Improvements
+
+* Add discount × product interaction analysis
+* Build profit-focused Tableau dashboard story
+* Analyze customer lifetime value (CLV) at segment level
+* Introduce basic forecasting model
+
+<br>
+<br>
+If you found this project helpful or insightful, a ⭐ on this repo would make my day !! 😊
