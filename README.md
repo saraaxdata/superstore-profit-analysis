@@ -1,4 +1,4 @@
-# 🛍️ RetailCo Profitability Analysis  
+# 🛍️ RetailCo Profitability Analysis & Optimization  
 Superstore Dataset | Python + SQL (PostgreSQL) 
 
 <br>
