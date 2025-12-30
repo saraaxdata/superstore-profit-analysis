@@ -1,5 +1,5 @@
 # 🛍️ Retail Profitability & Pricing Analytics
-Superstore Dataset | Python + SQL (PostgreSQL) 
+Superstore Dataset | Python + SQL (PostgreSQL) + Tableau
 
 <br>
 
@@ -7,9 +7,11 @@ Superstore Dataset | Python + SQL (PostgreSQL)
 
 **RetailCo faced inconsistent profitability despite strong sales.** 
 
-Analyzed ~10K orders using **Python for data cleaning** and **SQL in PostgreSQL (aggregations, filtering, CASE)** to diagnose inconsistent profitability, identifying discount, product, region, and time-period drivers with **$200K+ potential profit improvement** through targeted recommendations.
+Analyzed ~10K orders using **Python for data cleaning** and **SQL in PostgreSQL (aggregations, filtering, CASE)** to diagnose , identifying discount, product, region, and time-period drivers with **$200K+ potential profit improvement** through targeted recommendations.  
+Built a interactive Tableau dashboard to view the metrics and show the drivers of inconsistent profitability. [View Live Dashboard](https://public.tableau.com/app/profile/saraaxdata/viz/ProfitabilityPricingAnalysis/Dashboard)
 
-![cheung-yin-8TEj9frsgO0-unsplash (1)](https://github.com/user-attachments/assets/201f504b-dff1-4c90-ab96-8d82896d9721)
+<img width="1717" height="811" alt="image" src="https://github.com/user-attachments/assets/b72cb705-8063-4589-8d79-4cbf91a76f90" />
+
 
 ## 💼 Business Problem 
 
@@ -119,7 +121,8 @@ This section lists the dataset, tools, and technologies used to perform the anal
 
 * Python (Pandas) – Data cleaning and preprocessing
 * SQL - Aggregations, filtering, CASE statements, GROUP BY
-* PostgreSQL (pgAdmin) – SQL-based analysis
+* PostgreSQL (pgAdmin) – SQL-based analysis\
+* Tableau
 
 <br>
 
@@ -169,7 +172,6 @@ pip install -r requirements.txt
 ## 🚀 Future Improvements
 
 * Add discount × product interaction analysis
-* Build profit-focused Tableau dashboard story
 * Analyze customer lifetime value (CLV) at segment level
 * Introduce basic forecasting model
 
