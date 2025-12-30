@@ -1,4 +1,4 @@
-# 🛍️ Retail Profitability & Pricing Analytics
+# 🛍️ Profitability & Pricing Analytics
 Superstore Dataset | Python + SQL (PostgreSQL) + Tableau
 
 <br>
